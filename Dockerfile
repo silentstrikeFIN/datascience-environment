@@ -80,20 +80,6 @@ RUN /bin/bash -c "source activate base && \
     fix-permissions $CONDA_DIR /home/$NB_USER && \
     source deactivate && \
 ##################################
-#### Add Packages to Python27#####
-##################################
-    source activate python27 && \
-    conda install --quiet --yes -c anaconda numpy scipy scikit-learn scikit-image pandas tqdm ipykernel && \
-    conda install --quiet --yes -c anaconda tensorflow ; \
-    conda install --quiet --yes -c pytorch pytorch-cpu torchvision-cpu ; \
-    conda install --quiet --yes -c conda-forge openpyxl h5py matplotlib ; \
-    conda upgrade --all -y ;\
-    pip install opencv-python ; \
-    conda clean --all -y ; \
-    python -m ipykernel install --user --name python27 --display-name 'Python 2.7' && \
-    fix-permissions $CONDA_DIR /home/$NB_USER && \
-    source deactivate && \
-##################################
 #### Add Packages to Python36#####
 ##################################
     source activate python36 && \
