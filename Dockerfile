@@ -85,6 +85,7 @@ RUN /bin/bash -c "source activate base && \
     source activate python36 && \
     conda install --quiet --yes -c anaconda numpy scipy scikit-learn scikit-image pandas tqdm ipykernel && \
     conda install --quiet --yes -c anaconda tensorflow ; \
+    conda install --quiet --yes -c keras StrawberryFields ; \
     conda install --quiet --yes -c pytorch pytorch-cpu torchvision-cpu ; \
     conda install --quiet --yes -c conda-forge openpyxl h5py matplotlib ; \
     conda upgrade --all -y ;\
