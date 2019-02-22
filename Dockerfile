@@ -36,6 +36,6 @@ RUN /bin/bash -c "source activate python36 && \
     conda clean --all -y ; \
     python -m ipykernel install --user --name base --display-name 'Python 3(Base)' && \
     fix-permissions $CONDA_DIR /home/$NB_USER && \
-    source deactivate && \
+    source deactivate"
 
 EXPOSE 8888 4040 8080 8081 7077
